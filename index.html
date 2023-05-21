@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="assets/styles/normalize.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="script.js"></script>
+</head>
+<body class="body">
+    <h1>Корзина</h1>
+
+<div class="product">
+    <img src="assets/images/Акварель.jfif" class="img" alt="">
+    <span class="title">Краска акварель "Сонет" набор 24 цветов</span>
+    <span class="about">Набор акварельных художественных красок "Сонет" 24 цветов в кюветах по 2.5 мл.</span>
+    <span class="price" id="priceA">500p</span>
+
+</div>
+<div class="product">
+    <img src="assets/images/Бумага.jfif" class="img" alt="">
+    <span class="title">Акварельная бумага формата A2</span>
+    <span class="about">Бумага акварельная белая 400х600, плотность 300гр, 100% хлопка, 5 листов</span>
+    <span class="price" id="priceB">300p</span>
+</div>
+<div class="product">
+    <img src="assets/images/Пенал.jfif" class="img" alt="">
+    <span class="title">Пенал для акварели "Сонет"</span>
+    <span class="about">Пенал "Сонет" предназначен для размещения 24 акварельных кювет. Размер - 120х69х23 мм</span>
+    <span class="price" id="priceC">800p</span>
+</div>
+<div class="product">
+    <img src="assets/images/Гуашь.jfif" class="img" alt="">
+    <span class="title">Краска гуашь "Сонет" набор 12 цветов</span>
+    <span class="about">Набор гуашевых художественных красок "Сонет" 12 цветов в банках по 40 мл.</span>
+    <span class="price" id="priceD">400p</span>
+</div>
+<div class="amount">Итого к оплате: <span class="sum" id="sum">2000p</span></div>
+<div class="btn">
+    <input type="button" value="Применить купон на 20%" onclick="sale(), priceA(), priceB(), priceC(), priceD()" class="button">
+</div>
+
+<div class="div">
+<input type="text" id="text1" value="Введите число">
+<input type="text" id="text2" value="Здесь появится результат">
+ <input type="button" id="but" value="Нажми на меня">
+  <script type="text/javascript">
+  text1.addEventListener("focus", function(){this.value = null}, false);
+   but.addEventListener("click", function(){
+       if (isNaN(parseInt(text1.value))) {alert("Введено не число")}
+       else{ text2.value = Math.pow(parseInt(text1.value ),2);
+       text1.value = null;
+       }} ,false);
+       </script>
+       </div>
+</body>
+</html>
